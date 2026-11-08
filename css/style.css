@@ -84,6 +84,7 @@ body {
   color: #4b5563;
 }
 
+/* Buttons */
 .btn {
   display: inline-block;
   background: #2563eb;
@@ -92,10 +93,17 @@ body {
   border-radius: 6px;
   text-decoration: none;
   font-weight: 600;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
 }
 
 .btn:hover {
   background: #1d4ed8;
+}
+
+.btn-primary {
+  margin-top: 1rem;
 }
 
 /* Sections */
@@ -110,23 +118,124 @@ section h2 {
   color: #111827;
 }
 
-/* Projects */
+/* Write post box */
+.write-box {
+  max-width: 600px;
+  margin: 0 auto 2.5rem auto;
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 1.75rem;
+}
+
+.write-box h3 {
+  margin-bottom: 1.25rem;
+  font-size: 1.25rem;
+  color: #111827;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.4rem;
+  font-weight: 500;
+  color: #374151;
+  font-size: 0.95rem;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 0.6rem 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #2563eb;
+  ring-color: #2563eb;
+}
+
+/* Project grid & cards */
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 1.5rem;
 }
 
 .project-card {
   border: 1px solid #e5e7eb;
-  border-radius: 8px;
+  border-radius: 10px;
   padding: 1.5rem;
   background: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.project-card .tag {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  background: #eff6ff;
+  color: #1d4ed8;
+  align-self: flex-start;
 }
 
 .project-card h3 {
-  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
   color: #111827;
+}
+
+.project-card p {
+  color: #4b5563;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.project-card .meta {
+  margin-top: auto;
+  font-size: 0.8rem;
+  color: #9ca3af;
+  border-top: 1px solid #f3f4f6;
+  padding-top: 0.75rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.delete-btn {
+  background: transparent;
+  border: none;
+  color: #ef4444;
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+}
+
+.delete-btn:hover {
+  background: #fee2e2;
+}
+
+/* Empty state */
+.empty-state {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 3rem;
+  color: #6b7280;
 }
 
 /* Contact */
@@ -151,5 +260,8 @@ section h2 {
   .nav {
     gap: 1rem;
     font-size: 0.9rem;
+  }
+  .write-box {
+    padding: 1.25rem;
   }
 }
