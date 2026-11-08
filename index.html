@@ -9,11 +9,11 @@
 <body>
   <header class="header">
     <div class="container">
-      <h1 class="logo">Tint Naing Htun</h1>
+      <h1 class="logo">SniftGod</h1>
       <nav class="nav">
         <a href="#home" class="active">Home</a>
-        <a href="#about">Posts</a>
-        <a href="#projects">AI</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
       </nav>
     </div>
@@ -22,31 +22,50 @@
   <main>
     <section id="home" class="hero">
       <div class="hero-content">
-        <h2>Welcome to My Website</h2>
-        <p>This is My Website for only My Notes.</p>
-        <a href="#projects" class="btn">View Posts</a>
+        <h2>Welcome to my site</h2>
+        <p>Write and manage your own posts below.</p>
+        <a href="#projects" class="btn">Go to Projects</a>
       </div>
     </section>
 
     <section id="about" class="about">
       <div class="container">
         <h2>About</h2>
-        <p>Built with plain HTML, CSS, and JavaScript. Ready to customize and deploy.</p>
+        <p>Built with plain HTML, CSS, and JavaScript. Posts are saved in your browser.</p>
       </div>
     </section>
 
     <section id="projects" class="projects">
       <div class="container">
         <h2>Projects</h2>
-        <div class="project-grid">
-          <div class="project-card">
-            <h3>Project One</h3>
-            <p>A short description of your first project.</p>
-          </div>
-          <div class="project-card">
-            <h3>Project Two</h3>
-            <p>A short description of your second project.</p>
-          </div>
+
+        <!-- Write post box -->
+        <div class="write-box">
+          <h3>✍️ Write a new post</h3>
+          <form id="post-form">
+            <div class="form-group">
+              <label for="post-title">Title</label>
+              <input type="text" id="post-title" placeholder="e.g. My new project" required />
+            </div>
+            <div class="form-group">
+              <label for="post-body">Content</label>
+              <textarea id="post-body" rows="4" placeholder="Tell us about this project..." required></textarea>
+            </div>
+            <div class="form-group">
+              <label for="post-category">Category</label>
+              <select id="post-category">
+                <option value="Project">Project</option>
+                <option value="Idea">Idea</option>
+                <option value="Note">Note</option>
+              </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Add Post</button>
+          </form>
+        </div>
+
+        <!-- Posts list -->
+        <div id="posts-container" class="project-grid">
+          <!-- Posts will be rendered here by JavaScript -->
         </div>
       </div>
     </section>
